@@ -1,0 +1,52 @@
+<html>
+ 
+  <head>
+  </head>
+ 
+  <body>
+    <title>EaglerCraft Launcher (1.12.2) (カスタムホストサーバーの HTTP で実行)</title>
+    <h1>Minecraft 1.8.8</h1>
+    <h2>免責事項:プレイする前に、ページが読み込まれる前に必ず5回クリックしてください。そうしないと、キャラクターを移動できない可能性があります。</h2>
+    <b><i>クリックして "Minecraft 1.12.2" を起動して、今すぐプレイしてください！（シェーダーサポート）（独自のサーバーを起動したい場合は、HTTPでホストしてください）</i></b>
+<button style="background-color: rgb(0, 121, 50); color: rgb(0, 139, 58); padding: 10px 20px; border-radius: 4px;">Play Now</button>
+    <script>
+      var urlObj = new window.URL(window.location.href);
+      var url = "https://7890-8654.github.io/Eaglercraft1.12.2/Eagler_1.12.2_Offline.html.html";
+      if (url) {
+        var win;
+ 
+        document.querySelector('button').onclick = function() {
+          if (win) {
+            win.focus();
+          } else {
+            win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+          }
+          document.querySelector('button').style.bacground = 'grey';
+          document.querySelector('button').innerHTML = "Play Now";
+          window.close()
+          window.close()
+          window.close()
+        }
+      }
+ 
+    </script>
+    
+    <h1>アップロードするModsを選択します。</h1>
+    <h3>複数のファイルが許可されています。</h3>
+    <form>
+      <label for="myfile">Mods/Extensions/Plugins(.jar、.bukkit、.py、および.batファイルが受け入れられます):</label>
+      <input type="file" id="myfile" name="myfile" multiple accept=".jar, .bukkit, .py, .bat"><br><br>
+      <input type="submit">
+    </form>
+  </body>
+ 
+</html>
